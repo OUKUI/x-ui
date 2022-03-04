@@ -12,6 +12,15 @@
 - 更多高级配置项，详见面板
 
 # 安装&升级
+1、删除系统时间
+```
+rm -rf /etc/localtime 
+```
+2、修改系统时间到CST
+```
+ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+```
+3、安装x-ui
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
 ```
@@ -70,10 +79,3 @@ docker build -t x-ui .
 ```
 x-ui v2-ui
 ```
-
-## issue 关闭
-各种小白问题看得血压很高
-
-## Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/vaxilu/x-ui.svg)](https://starchart.cc/vaxilu/x-ui)
